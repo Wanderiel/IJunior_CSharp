@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_01_Variables", "Basics_01_Variables\Basics_01_Variables.csproj", "{3E60D940-84F9-4621-ABA7-0905426DA142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_01_Variables", "Basics_01_Variables\Basics_01_Variables.csproj", "{3E60D940-84F9-4621-ABA7-0905426DA142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_03_Strings", "Basics_03_Strings\Basics_03_Strings.csproj", "{F20CA334-5456-4809-A5C0-925817048571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_03_Strings", "Basics_03_Strings\Basics_03_Strings.csproj", "{F20CA334-5456-4809-A5C0-925817048571}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_04_Pictures", "Basics_04_Pictures\Basics_04_Pictures.csproj", "{02C1C8BC-B81F-4377-B66A-6A97EB067B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_04_Pictures", "Basics_04_Pictures\Basics_04_Pictures.csproj", "{02C1C8BC-B81F-4377-B66A-6A97EB067B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_05_Permutation", "Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_05_Permutation", "Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_06_CrystalShop", "Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_06_CrystalShop", "Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_07_Polyclinic", "Basics_07_Polyclinic\Basics_07_Polyclinic.csproj", "{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_07_Polyclinic", "Basics_07_Polyclinic\Basics_07_Polyclinic.csproj", "{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_01_Mastering", "IfSwitchLoops\ISL_01_Mastering\ISL_01_Mastering.csproj", "{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_01_Mastering", "IfSwitchLoops\ISL_01_Mastering\ISL_01_Mastering.csproj", "{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B2_IfSwitchLoops", "B2_IfSwitchLoops", "{A856B975-B69B-4B23-93F2-BE085AFED3B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_02_OutputControl", "IfSwitchLoops\ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_02_OutputControl", "IfSwitchLoops\ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_03_Sequence", "IfSwitchLoops\ISL_03_Sequence\ISL_03_Sequence.csproj", "{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{03C3BEEA-B25B-4DEA-B105-066B9D463AE2} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 		{633E26AA-CE32-4FAB-80A9-006DD4C5C928} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
+		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
