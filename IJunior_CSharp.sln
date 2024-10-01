@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_03_Sequence", "IfSwitch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_04_TheSum", "IfSwitchLoops\ISL_04_TheSum\ISL_04_TheSum.csproj", "{F05E9731-E623-4CA1-B142-D5113F7C4D92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_05_ConsoleMenu", "IfSwitchLoops\ISL_05_ConsoleMenu\ISL_05_ConsoleMenu.csproj", "{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{F05E9731-E623-4CA1-B142-D5113F7C4D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05E9731-E623-4CA1-B142-D5113F7C4D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05E9731-E623-4CA1-B142-D5113F7C4D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{633E26AA-CE32-4FAB-80A9-006DD4C5C928} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 		{335805D2-7F40-4CA8-B4C9-D0806EFC54BC} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 		{F05E9731-E623-4CA1-B142-D5113F7C4D92} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
+		{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
