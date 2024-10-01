@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_07_NameOutput", "IfSwit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_08_UnderPassword", "IfSwitchLoops\ISL_08_UnderPassword\ISL_08_UnderPassword.csproj", "{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_09_MultiplesNumbers", "IfSwitchLoops\ISL_09_MultiplesNumbers\ISL_09_MultiplesNumbers.csproj", "{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{BED9C907-F5F0-490E-B38A-64427A73470A} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 		{222BC06A-8129-4F0D-87CF-C00AEFC5A7FF} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 		{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
+		{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
