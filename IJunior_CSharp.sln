@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_01_Mastering", "IfSwitc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B2_IfSwitchLoops", "B2_IfSwitchLoops", "{A856B975-B69B-4B23-93F2-BE085AFED3B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_02_OutputControl", "ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_02_OutputControl", "IfSwitchLoops\ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
