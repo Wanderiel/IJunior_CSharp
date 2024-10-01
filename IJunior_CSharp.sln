@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_07_Polyclinic", "Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_01_Mastering", "IfSwitchLoops\ISL_01_Mastering\ISL_01_Mastering.csproj", "{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IfSwitchLoops", "IfSwitchLoops", "{A856B975-B69B-4B23-93F2-BE085AFED3B1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B2_IfSwitchLoops", "B2_IfSwitchLoops", "{A856B975-B69B-4B23-93F2-BE085AFED3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISL_02_OutputControl", "ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,12 +55,17 @@ Global
 		{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633E26AA-CE32-4FAB-80A9-006DD4C5C928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{03C3BEEA-B25B-4DEA-B105-066B9D463AE2} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
+		{633E26AA-CE32-4FAB-80A9-006DD4C5C928} = {A856B975-B69B-4B23-93F2-BE085AFED3B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
