@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_05_Permutation", "Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_06_CrystalShop", "Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_07_Polyclinic", "Basics_07_Polyclinic\Basics_07_Polyclinic.csproj", "{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
