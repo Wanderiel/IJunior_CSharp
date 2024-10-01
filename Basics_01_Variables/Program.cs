@@ -11,7 +11,7 @@
             sbyte modifer = 9;
             int lengthSegment = 32000;
             float hitPoints = 18.9f;
-            double manaPionts = 9.8;
+            double manaPoints = 9.8;
             char armorGrade = 'A';
             bool isDead = false;
         }
