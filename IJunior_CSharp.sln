@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_03_Strings", "Basics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_04_Pictures", "Basics_04_Pictures\Basics_04_Pictures.csproj", "{02C1C8BC-B81F-4377-B66A-6A97EB067B84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_05_Permutation", "Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02C1C8BC-B81F-4377-B66A-6A97EB067B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C1C8BC-B81F-4377-B66A-6A97EB067B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C1C8BC-B81F-4377-B66A-6A97EB067B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
