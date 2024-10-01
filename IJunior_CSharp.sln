@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_04_Pictures", "Basic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_05_Permutation", "Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics_06_CrystalShop", "Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDBD98B4-6E43-42DB-B108-80438297A37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F835740-6686-43D5-BAA0-913FA7EF0946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
