@@ -3,43 +3,43 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_01_Variables", "Basics_01_Variables\Basics_01_Variables.csproj", "{3E60D940-84F9-4621-ABA7-0905426DA142}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B1_Basics", "B1_Basics", "{CD51C70C-3D09-4CE6-B5B9-B4CF1A4BC957}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_03_Strings", "Basics_03_Strings\Basics_03_Strings.csproj", "{F20CA334-5456-4809-A5C0-925817048571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_01_Variables", "B1_Basics\Basics_01_Variables\Basics_01_Variables.csproj", "{3E60D940-84F9-4621-ABA7-0905426DA142}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_04_Pictures", "Basics_04_Pictures\Basics_04_Pictures.csproj", "{02C1C8BC-B81F-4377-B66A-6A97EB067B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_03_Strings", "B1_Basics\Basics_03_Strings\Basics_03_Strings.csproj", "{F20CA334-5456-4809-A5C0-925817048571}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_05_Permutation", "Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_04_Pictures", "B1_Basics\Basics_04_Pictures\Basics_04_Pictures.csproj", "{02C1C8BC-B81F-4377-B66A-6A97EB067B84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_06_CrystalShop", "Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_05_Permutation", "B1_Basics\Basics_05_Permutation\Basics_05_Permutation.csproj", "{BDBD98B4-6E43-42DB-B108-80438297A37D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_07_Polyclinic", "Basics_07_Polyclinic\Basics_07_Polyclinic.csproj", "{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_06_CrystalShop", "B1_Basics\Basics_06_CrystalShop\Basics_06_CrystalShop.csproj", "{2F835740-6686-43D5-BAA0-913FA7EF0946}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_01_Mastering", "IfSwitchLoops\ISL_01_Mastering\ISL_01_Mastering.csproj", "{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics_07_Polyclinic", "B1_Basics\Basics_07_Polyclinic\Basics_07_Polyclinic.csproj", "{AB83A0C8-EEB5-4D6D-A6CC-B9C02A207807}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B2_IfSwitchLoops", "B2_IfSwitchLoops", "{A856B975-B69B-4B23-93F2-BE085AFED3B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_02_OutputControl", "IfSwitchLoops\ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_01_Mastering", "B2_IfSwitchLoops\ISL_01_Mastering\ISL_01_Mastering.csproj", "{03C3BEEA-B25B-4DEA-B105-066B9D463AE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_03_Sequence", "IfSwitchLoops\ISL_03_Sequence\ISL_03_Sequence.csproj", "{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_02_OutputControl", "B2_IfSwitchLoops\ISL_02_OutputControl\ISL_02_OutputControl.csproj", "{633E26AA-CE32-4FAB-80A9-006DD4C5C928}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_04_TheSum", "IfSwitchLoops\ISL_04_TheSum\ISL_04_TheSum.csproj", "{F05E9731-E623-4CA1-B142-D5113F7C4D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_03_Sequence", "B2_IfSwitchLoops\ISL_03_Sequence\ISL_03_Sequence.csproj", "{335805D2-7F40-4CA8-B4C9-D0806EFC54BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_05_ConsoleMenu", "IfSwitchLoops\ISL_05_ConsoleMenu\ISL_05_ConsoleMenu.csproj", "{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_04_TheSum", "B2_IfSwitchLoops\ISL_04_TheSum\ISL_04_TheSum.csproj", "{F05E9731-E623-4CA1-B142-D5113F7C4D92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_06_CurrencyConverter", "IfSwitchLoops\ISL_06_CurrencyConverter\ISL_06_CurrencyConverter.csproj", "{BED9C907-F5F0-490E-B38A-64427A73470A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_05_ConsoleMenu", "B2_IfSwitchLoops\ISL_05_ConsoleMenu\ISL_05_ConsoleMenu.csproj", "{01C6FE67-0817-4DFD-BC5D-9DEC5DED4585}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_07_NameOutput", "IfSwitchLoops\ISL_07_NameOutput\ISL_07_NameOutput.csproj", "{222BC06A-8129-4F0D-87CF-C00AEFC5A7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_06_CurrencyConverter", "B2_IfSwitchLoops\ISL_06_CurrencyConverter\ISL_06_CurrencyConverter.csproj", "{BED9C907-F5F0-490E-B38A-64427A73470A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_08_UnderPassword", "IfSwitchLoops\ISL_08_UnderPassword\ISL_08_UnderPassword.csproj", "{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_07_NameOutput", "B2_IfSwitchLoops\ISL_07_NameOutput\ISL_07_NameOutput.csproj", "{222BC06A-8129-4F0D-87CF-C00AEFC5A7FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_09_MultiplesNumbers", "IfSwitchLoops\ISL_09_MultiplesNumbers\ISL_09_MultiplesNumbers.csproj", "{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_08_UnderPassword", "B2_IfSwitchLoops\ISL_08_UnderPassword\ISL_08_UnderPassword.csproj", "{0A60D79C-5D3B-4B58-B4D3-B4CDA46DE141}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_10_DegreeTwo", "IfSwitchLoops\ISL_10_DegreeTwo\ISL_10_DegreeTwo.csproj", "{12EE3C9E-F662-449D-A5C0-F0330BF6BA12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_09_MultiplesNumbers", "B2_IfSwitchLoops\ISL_09_MultiplesNumbers\ISL_09_MultiplesNumbers.csproj", "{9DF25FBD-C796-4A8D-911D-9D19CD13BC9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_11_BossFight", "IfSwitchLoops\ISL_11_BossFight\ISL_11_BossFight.csproj", "{D0BFA05E-EED1-4A75-A141-F5651498357B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_10_DegreeTwo", "B2_IfSwitchLoops\ISL_10_DegreeTwo\ISL_10_DegreeTwo.csproj", "{12EE3C9E-F662-449D-A5C0-F0330BF6BA12}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B1_Basics", "B1_Basics", "{CD51C70C-3D09-4CE6-B5B9-B4CF1A4BC957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISL_11_BossFight", "B2_IfSwitchLoops\ISL_11_BossFight\ISL_11_BossFight.csproj", "{D0BFA05E-EED1-4A75-A141-F5651498357B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B3_Arrays", "B3_Arrays", "{321B9542-0657-42B1-A06F-291F282A51F5}"
 EndProject
