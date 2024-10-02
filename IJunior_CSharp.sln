@@ -51,7 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_03_LocalMaxima", "B3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_04_DynamicArray", "B3_Arrays\Arrays_04_DynamicArray\Arrays_04_DynamicArray.csproj", "{4066C33B-1937-45E5-B2E1-2D8162C5B905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_05_RepetitionsSubarray", "Arrays_05_RepetitionsSubarray\Arrays_05_RepetitionsSubarray.csproj", "{CE406E24-4853-439D-B26D-A6D2D08AD5DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_05_RepetitionsSubarray", "B3_Arrays\Arrays_05_RepetitionsSubarray\Arrays_05_RepetitionsSubarray.csproj", "{CE406E24-4853-439D-B26D-A6D2D08AD5DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
