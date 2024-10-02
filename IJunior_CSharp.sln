@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_06_Sorting", "B3_Arr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_07_Split", "B3_Arrays\Arrays_07_Split\Arrays_07_Split.csproj", "{26B84B37-F926-46E9-9345-D471B06FC746}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_08_ShiftingValues", "B3_Arrays\Arrays_08_ShiftingValues\Arrays_08_ShiftingValues.csproj", "{3537420E-49BB-45C1-B866-2B54ED19D75E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{26B84B37-F926-46E9-9345-D471B06FC746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B84B37-F926-46E9-9345-D471B06FC746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B84B37-F926-46E9-9345-D471B06FC746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3537420E-49BB-45C1-B866-2B54ED19D75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3537420E-49BB-45C1-B866-2B54ED19D75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3537420E-49BB-45C1-B866-2B54ED19D75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3537420E-49BB-45C1-B866-2B54ED19D75E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +194,7 @@ Global
 		{CE406E24-4853-439D-B26D-A6D2D08AD5DE} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{48CB5A70-E63D-449E-AEEC-F7B989B40404} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{26B84B37-F926-46E9-9345-D471B06FC746} = {321B9542-0657-42B1-A06F-291F282A51F5}
+		{3537420E-49BB-45C1-B866-2B54ED19D75E} = {321B9542-0657-42B1-A06F-291F282A51F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
