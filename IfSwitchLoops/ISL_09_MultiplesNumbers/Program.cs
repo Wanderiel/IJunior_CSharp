@@ -4,22 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
+            Random random = new Random();
 
-            int minNumber = 50;
-            int maxNumber = 250;
-            int minRandom = 10;
-            int maxRandom = 25;
-            int number = rand.Next(minRandom, maxRandom);
+            int minRangeLimit = 50;
+            int maxRangeLimit = 250;
+            int minRandomNumber = 10;
+            int maxRandomNumber = 25;
+            int number = random.Next(minRandomNumber, maxRandomNumber + 1);
             int count = 0;
 
-            for (int i = number; i <= maxNumber; i += number)
+            for (int i = number; i <= maxRangeLimit; i += number)
             {
-                if (i >= minNumber && i <= maxNumber)
+                if (i >= minRangeLimit)
                     count++;
             }
 
-            Console.WriteLine($"Количество чисел в диапазоне [{minNumber}-{maxNumber}] кратных {number}: {count}");
+            Console.WriteLine($"Количество чисел в диапазоне [{minRangeLimit}-{maxRangeLimit}] кратных {number}: {count}");
 
             Console.ReadKey();
         }
