@@ -20,7 +20,7 @@
             }
 
             int number = numbers[0];
-            string search = $"{number} ";
+            string duplicateNumbers = $"{number} ";
 
             for (int i = 1; i < numbers.Length; i++)
             {
@@ -29,11 +29,11 @@
                     count++;
 
                     if (count == maxCount)
-                        search += $"{number} ";
+                        duplicateNumbers += $"{number} ";
 
                     if (count > maxCount)
                     {
-                        search = $"{number} ";
+                        duplicateNumbers = $"{number} ";
                         maxCount = count;
                     }
                 }
@@ -44,7 +44,7 @@
                 }
             }
 
-            Console.WriteLine($"\n\nЧисло {search}встречалось {maxCount} раз подряд.");
+            Console.WriteLine($"\n\nЧисло {duplicateNumbers}встречалось {maxCount} раз подряд.");
 
             Console.ReadKey();
         }
