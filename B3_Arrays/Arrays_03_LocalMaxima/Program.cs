@@ -8,7 +8,6 @@
 
             int minRandomNumber = 1;
             int maxRandomNumber = 9;
-            //int shift = 1;
             int length = 30;
             int[] numbers = new int[length];
 
