@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_03_LocalMaxima", "B3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_04_DynamicArray", "B3_Arrays\Arrays_04_DynamicArray\Arrays_04_DynamicArray.csproj", "{4066C33B-1937-45E5-B2E1-2D8162C5B905}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_05_RepetitionsSubarray", "Arrays_05_RepetitionsSubarray\Arrays_05_RepetitionsSubarray.csproj", "{CE406E24-4853-439D-B26D-A6D2D08AD5DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{4066C33B-1937-45E5-B2E1-2D8162C5B905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4066C33B-1937-45E5-B2E1-2D8162C5B905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4066C33B-1937-45E5-B2E1-2D8162C5B905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE406E24-4853-439D-B26D-A6D2D08AD5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE406E24-4853-439D-B26D-A6D2D08AD5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE406E24-4853-439D-B26D-A6D2D08AD5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE406E24-4853-439D-B26D-A6D2D08AD5DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +173,7 @@ Global
 		{911C800C-7640-49FD-BE7E-9ABA3EBC08D8} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{4326A3B5-E2B8-41D8-8167-D9CF5797DF29} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{4066C33B-1937-45E5-B2E1-2D8162C5B905} = {321B9542-0657-42B1-A06F-291F282A51F5}
+		{CE406E24-4853-439D-B26D-A6D2D08AD5DE} = {321B9542-0657-42B1-A06F-291F282A51F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
