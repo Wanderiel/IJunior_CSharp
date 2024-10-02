@@ -11,13 +11,13 @@
 
             Random random = new Random();
             int bossHealth = 50;
-            int bossMaxDamage = 3;
+            int bossMaxDamage = 5;
             int boosBonusDamage = random.Next(bossMaxDamage) + 1;
             bool isBossLive = true;
 
             int playerMaxHealth = 30;
             int playerHealth = playerMaxHealth;
-            int playerMaxMana = 20;
+            int playerMaxMana = 15;
             int playerMana = playerMaxMana;
             int playerMaxDamage = 3;
             int playerBonusDamage = random.Next(playerMaxDamage) + 1;
@@ -76,16 +76,23 @@
                         break;
 
                     case CommandSpellExplosion:
-                        damage = spellExplosionDamage;
-                        canCastSpellExplosion = false;
+                        if (canCastSpellExplosion)
+                        {
+                            damage = spellExplosionDamage;
+                            canCastSpellExplosion = false;
+                            Console.WriteLine("Искусство - это ВЗРЫВ!");
+                        }
                         break;
 
                     case CommandSpellHeal:
-                        playerHealth = Math.Clamp(playerHealth + spellHealRestoreHealth, playerHealth, playerMaxHealth);
-                        playerMana = Math.Clamp(playerMana + spellHealRestoreMana, playerMana, playerMaxMana);
-                        spellHealCount--;
-                        Console.WriteLine($"Восстановлено: {spellHealRestoreHealth} здоровья и {spellHealRestoreMana} маны");
-                        Console.WriteLine($"Осталось зарядов: {spellHealCount}");
+                        if (spellHealCount > 0)
+                        {
+                            playerHealth = Math.Clamp(playerHealth + spellHealRestoreHealth, playerHealth, playerMaxHealth);
+                            playerMana = Math.Clamp(playerMana + spellHealRestoreMana, playerMana, playerMaxMana);
+                            spellHealCount--;
+                            Console.WriteLine($"Восстановлено: {spellHealRestoreHealth} здоровья и {spellHealRestoreMana} маны");
+                            Console.WriteLine($"Осталось зарядов: {spellHealCount}");
+                        }
                         break;
                 }
 
@@ -95,8 +102,27 @@
                     Console.WriteLine($"Вы нанесли {damage} урона");
                 }
 
+                int bossDamage = random.Next(bossMaxDamage) + 1 + boosBonusDamage;
+                playerHealth -= bossDamage;
+                Console.WriteLine($"Противник наносит вам урон {bossDamage}");
+
+                if (bossHealth < 0)
+                    isBossLive = false;
+
+                if (playerHealth < 0)
+                    isPlayerLive = false;
+
                 Console.ReadKey();
             }
+
+            if (isPlayerLive)
+                Console.WriteLine("Противник повержен, победа за вами!");
+            else if (isBossLive)
+                Console.WriteLine("Вы мертвы...");
+            else
+                Console.WriteLine("Противник повержен, но и вы не живы...");
+
+            Console.ReadKey();
         }
     }
 }
