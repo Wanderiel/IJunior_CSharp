@@ -6,8 +6,8 @@
         {
             Random random = new Random();
 
-            int maxRandom = 1000;
-            int randomNumber = random.Next(maxRandom);
+            int maxRandomNumber = 1000;
+            int randomNumber = random.Next(maxRandomNumber);
             int number = 1;
             int power = 0;
             int baseNumber = 2;
