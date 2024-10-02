@@ -9,7 +9,6 @@
 
             string userInput;
 
-            //int shift = 1;
             int[] numbers = Array.Empty<int>();
 
             bool isWork = true;
@@ -42,13 +41,13 @@
                     default:
                         if (int.TryParse(userInput, out int number))
                         {
-                            int[] newNumbres = new int[numbers.Length + shift];
+                            int[] newNumbers = new int[numbers.Length + 1];
 
                             for (int i = 0; i < numbers.Length; i++)
-                                newNumbres[i] = numbers[i];
+                                newNumbers[i] = numbers[i];
 
-                            numbers = newNumbres;
-                            numbers[^shift] = number;
+                            numbers = newNumbers;
+                            numbers[^1] = number;
                         }
                         break;
                 }
