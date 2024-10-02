@@ -115,6 +115,8 @@
                 Console.ReadKey();
             }
 
+            Console.WriteLine();
+
             if (isPlayerLive)
                 Console.WriteLine("Противник повержен, победа за вами!");
             else if (isBossLive)
