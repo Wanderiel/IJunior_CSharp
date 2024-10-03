@@ -11,6 +11,8 @@
             int basePercent = 50;
             int maxPercent = 100;
 
+            Console.WriteLine("Программа рисует специальный бар.");
+
             ConsoleColor color = SelectColor();
 
             GetPosition(out int positionTop, out int positionLeft);
@@ -39,8 +41,6 @@
             ConsoleColor manaBarColor = ConsoleColor.Blue;
             ConsoleColor enduranceColor = ConsoleColor.Yellow;
 
-            Console.WriteLine("Программа рисует специальный бар.");
-            Console.WriteLine("Сейчас доступно только два:");
             Console.ForegroundColor = healthBarColor;
             Console.WriteLine($"[{CommandHealthBar}] Здоровье");
             Console.ForegroundColor = manaBarColor;
