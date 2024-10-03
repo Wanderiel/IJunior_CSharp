@@ -84,14 +84,14 @@
 
         private static string[] AddRecord(string[] array, string record)
         {
-            string[] newArray = new string[array.Length + 1];
+            string[] tempArray = new string[array.Length + 1];
 
             for (int i = 0; i < array.Length; i++)
-                newArray[i] = array[i];
+                tempArray[i] = array[i];
 
-            newArray[^1] = record;
+            tempArray[^1] = record;
 
-            return newArray;
+            return tempArray;
         }
 
         static void PrintDossiers(string[] surnames, string[] posts)
@@ -158,27 +158,33 @@
 
         private static void Find(string[] surnames, string[] posts)
         {
-            const int IdLength = 3;
-            const int SurnameLength = 18;
-            const int PostLength = 11;
+            const int IdLength = 5;
+            const int SurnameLength = 30;
+            const int PostLength = 38;
 
-            int recordLength = 39;
+            int recordLength = 80;
             char symbol = '=';
-
+            int count = 0;
             string userInput;
 
             Console.WriteLine("Введите фамилию для поиска: ");
             userInput = Console.ReadLine();
 
             Console.Clear();
-            Console.WriteLine($"найденые записи по фамилии {userInput}:\n" +
-                new string(symbol, recordLength));
+            Console.WriteLine($"найденные записи по фамилии {userInput}:");
+            Console.WriteLine(new string(symbol, recordLength));
 
             for (int i = 0; i < surnames.Length; i++)
+            {
                 if (surnames[i].Split()[0] == userInput)
-                    Console.WriteLine($"|{i,IdLength}" +
-                        $" |{surnames[i],SurnameLength}" +
-                        $" |{posts[i],PostLength} |");
+                {
+                    Console.WriteLine($"|{i,IdLength} |{surnames[i],SurnameLength} |{posts[i],PostLength} |");
+                    count++;
+                }
+            }
+
+            if (count == 0)
+                Console.WriteLine("Записей не найдено...");
 
             Console.WriteLine(new string(symbol, recordLength));
         }
