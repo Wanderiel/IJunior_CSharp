@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int number = GetNumber();
 
@@ -11,7 +11,7 @@
             Console.ReadKey();
         }
 
-        static private int GetNumber()
+        private static int GetNumber()
         {
             int number;
             string userInput = string.Empty;
