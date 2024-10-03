@@ -53,13 +53,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_04_DynamicArray", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_05_RepetitionsSubarray", "B3_Arrays\Arrays_05_RepetitionsSubarray\Arrays_05_RepetitionsSubarray.csproj", "{CE406E24-4853-439D-B26D-A6D2D08AD5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_06_Sorting", "B3_Arrays\Arrays_06_Sorting\Arrays_06_Sorting.csproj", "{48CB5A70-E63D-449E-AEEC-F7B989B40404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_06_Sorting", "B3_Arrays\Arrays_06_Sorting\Arrays_06_Sorting.csproj", "{48CB5A70-E63D-449E-AEEC-F7B989B40404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_07_Split", "B3_Arrays\Arrays_07_Split\Arrays_07_Split.csproj", "{26B84B37-F926-46E9-9345-D471B06FC746}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_07_Split", "B3_Arrays\Arrays_07_Split\Arrays_07_Split.csproj", "{26B84B37-F926-46E9-9345-D471B06FC746}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_08_ShiftingValues", "B3_Arrays\Arrays_08_ShiftingValues\Arrays_08_ShiftingValues.csproj", "{3537420E-49BB-45C1-B866-2B54ED19D75E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_08_ShiftingValues", "B3_Arrays\Arrays_08_ShiftingValues\Arrays_08_ShiftingValues.csproj", "{3537420E-49BB-45C1-B866-2B54ED19D75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_09_ParenthesisExpression", "B3_Arrays\Arrays_09_ParenthesisExpression\Arrays_09_ParenthesisExpression.csproj", "{2871E490-C761-41B0-848D-653A7C7D719A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_09_ParenthesisExpression", "B3_Arrays\Arrays_09_ParenthesisExpression\Arrays_09_ParenthesisExpression.csproj", "{2871E490-C761-41B0-848D-653A7C7D719A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B4_Functions", "B4_Functions", "{4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_01_ReadInt", "B4_Functions\Func_01_ReadInt\Func_01_ReadInt.csproj", "{54BE4C49-03B3-4680-9E7F-39918CE8776D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +175,10 @@ Global
 		{2871E490-C761-41B0-848D-653A7C7D719A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2871E490-C761-41B0-848D-653A7C7D719A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2871E490-C761-41B0-848D-653A7C7D719A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BE4C49-03B3-4680-9E7F-39918CE8776D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BE4C49-03B3-4680-9E7F-39918CE8776D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BE4C49-03B3-4680-9E7F-39918CE8776D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BE4C49-03B3-4680-9E7F-39918CE8776D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -202,6 +210,7 @@ Global
 		{26B84B37-F926-46E9-9345-D471B06FC746} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{3537420E-49BB-45C1-B866-2B54ED19D75E} = {321B9542-0657-42B1-A06F-291F282A51F5}
 		{2871E490-C761-41B0-848D-653A7C7D719A} = {321B9542-0657-42B1-A06F-291F282A51F5}
+		{54BE4C49-03B3-4680-9E7F-39918CE8776D} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
