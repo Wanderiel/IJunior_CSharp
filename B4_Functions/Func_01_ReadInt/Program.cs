@@ -4,14 +4,14 @@
     {
         private static void Main(string[] args)
         {
-            int number = GetNumber();
+            int number = ReadInt();
 
             Console.WriteLine(number);
 
             Console.ReadKey();
         }
 
-        private static int GetNumber()
+        private static int ReadInt()
         {
             int number;
             string userInput = string.Empty;

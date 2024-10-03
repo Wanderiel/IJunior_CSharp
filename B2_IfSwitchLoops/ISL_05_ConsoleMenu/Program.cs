@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            const string CommandShowJurmal = "J";
+            const string CommandShowJourmal = "J";
             const string CommandShowStatus = "S";
-            const string CommandRandomNumder = "R";
+            const string CommandRandomNumber = "R";
             const string CommandClearConsole = "C";
             const string CommandQuit = "Q";
 
@@ -21,9 +21,9 @@
             while (canExit == false)
             {
                 Console.WriteLine("Меню:");
-                Console.WriteLine($"{CommandShowJurmal} - Показать журнал");
+                Console.WriteLine($"{CommandShowJourmal} - Показать журнал");
                 Console.WriteLine($"{CommandShowStatus} - Показать статус");
-                Console.WriteLine($"{CommandRandomNumder} - Бросить кубик d{facesCount}");
+                Console.WriteLine($"{CommandRandomNumber} - Бросить кубик d{facesCount}");
                 Console.WriteLine($"{CommandClearConsole} - Очистить консоль");
                 Console.WriteLine($"{CommandQuit} - Выход");
 
@@ -31,7 +31,7 @@
 
                 switch (userInput.ToUpper())
                 {
-                    case CommandShowJurmal:
+                    case CommandShowJourmal:
                         Console.WriteLine($"Вы бросили кубик {count} раз;");
                         break;
 
@@ -39,7 +39,7 @@
                         Console.WriteLine(status);
                         break;
 
-                    case CommandRandomNumder:
+                    case CommandRandomNumber:
                         number = random.Next(facesCount) + 1;
                         Console.WriteLine($"Выпало: {number}");
                         status = "Жребий брошен";

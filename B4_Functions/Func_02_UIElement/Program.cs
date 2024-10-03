@@ -2,54 +2,77 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            const string HealthBarColorCommand = "1";
-            const string ManaBarColorCommand = "2";
+            const ConsoleKey CommandHealthBar = ConsoleKey.H;
+            const ConsoleKey CommandManaBar = ConsoleKey.M;
+            const ConsoleKey CommandEnduranceBar = ConsoleKey.E;
 
-            int percent = 50;
+            int basePercent = 50;
             int maxPercent = 100;
 
-            ConsoleColor baseColor = ConsoleColor.Yellow;
-            ConsoleColor healthbarColor = ConsoleColor.Red;
-            ConsoleColor manabarColor = ConsoleColor.Blue;
-
-            Console.WriteLine("Программа рисует специальный бар." +
-                "Любой выбор и ввод может быть скорректирован\n" +
-                "Сейчас доступно только два:" +
-                $"\n{HealthBarColorCommand}. Здоровье" +
-                $"\n{ManaBarColorCommand}. Мана");
-
-            Console.Write("\nКакой бар вы хотите отобразить: ");
-
-            switch (Console.ReadLine())
-            {
-                case HealthBarColorCommand:
-                    baseColor = healthbarColor;
-                    break;
-
-                case ManaBarColorCommand:
-                    baseColor = manabarColor;
-                    break;
-
-                default:
-                    Console.WriteLine("Нераспознанный ввод, отрисовка будет в стандартном цвете.");
-                    break;
-            }
+            ConsoleColor color = SelectColor();
 
             GetPosition(out int positionTop, out int positionLeft);
 
             if (TryGetNumber("Введите процент заполнения: ", out int value, maxPercent))
-                percent = value;
+                basePercent = value;
 
             Console.Write("\nВсе данные собраны. Для отображения бара нажмите любую клавишу...");
             Console.ReadKey();
 
             Console.Clear();
 
-            DrawBar(positionTop, positionLeft, percent, maxPercent, baseColor);
+            DrawBar(positionTop, positionLeft, basePercent, maxPercent, color);
 
             Console.ReadKey();
+        }
+
+        private static ConsoleColor SelectColor()
+        {
+            const ConsoleKey CommandHealthBar = ConsoleKey.H;
+            const ConsoleKey CommandManaBar = ConsoleKey.M;
+            const ConsoleKey CommandEnduranceBar = ConsoleKey.E;
+
+            ConsoleColor baseColor = ConsoleColor.Gray;
+            ConsoleColor healthBarColor = ConsoleColor.Red;
+            ConsoleColor manaBarColor = ConsoleColor.Blue;
+            ConsoleColor enduranceColor = ConsoleColor.Yellow;
+
+            Console.WriteLine("Программа рисует специальный бар.");
+            Console.WriteLine("Сейчас доступно только два:");
+            Console.ForegroundColor = healthBarColor;
+            Console.WriteLine($"[{CommandHealthBar}] Здоровье");
+            Console.ForegroundColor = manaBarColor;
+            Console.WriteLine($"[{CommandManaBar}] Мана");
+            Console.ForegroundColor = enduranceColor;
+            Console.WriteLine($"[{CommandEnduranceBar}] Выносливость");
+            Console.ResetColor();
+
+            Console.Write("\nКакой бар вы хотите отобразить: ");
+            ConsoleKey key = Console.ReadKey(true).Key;
+            Console.WriteLine();
+
+            switch (key)
+            {
+                case CommandHealthBar:
+                    baseColor = healthBarColor;
+                    break;
+
+                case CommandManaBar:
+                    baseColor = manaBarColor;
+                    break;
+
+                case CommandEnduranceBar:
+                    baseColor = enduranceColor;
+                    break;
+
+                default:
+                    Console.WriteLine("Нераспознанный ввод, будет взято стандартное значение");
+                    break;
+            }
+
+            return baseColor;
         }
 
         private static void GetPosition(out int positionTop, out int positionLeft)
@@ -89,8 +112,6 @@
 
             if (number < 0)
                 number = maxValue + number;
-
-            Console.WriteLine($"Приянто в значение {number}");
 
             return number;
         }
