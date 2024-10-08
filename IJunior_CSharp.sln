@@ -63,13 +63,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_09_ParenthesisExpres
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B4_Functions", "B4_Functions", "{4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_01_ReadInt", "B4_Functions\Func_01_ReadInt\Func_01_ReadInt.csproj", "{54BE4C49-03B3-4680-9E7F-39918CE8776D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func_01_ReadInt", "B4_Functions\Func_01_ReadInt\Func_01_ReadInt.csproj", "{54BE4C49-03B3-4680-9E7F-39918CE8776D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_02_UIElement", "B4_Functions\Func_02_UIElement\Func_02_UIElement.csproj", "{90F3FF65-3364-4A57-9ACF-194B8664B725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func_02_UIElement", "B4_Functions\Func_02_UIElement\Func_02_UIElement.csproj", "{90F3FF65-3364-4A57-9ACF-194B8664B725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_03_Shuffle", "B4_Functions\Func_03_Shuffle\Func_03_Shuffle.csproj", "{0705602E-75A0-4417-BACB-FA5B2FB10754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func_03_Shuffle", "B4_Functions\Func_03_Shuffle\Func_03_Shuffle.csproj", "{0705602E-75A0-4417-BACB-FA5B2FB10754}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_04_PersonnelAccounting", "B4_Functions\Func_04_PersonnelAccounting\Func_04_PersonnelAccounting.csproj", "{8FF80829-4F62-49DA-9BFD-A1F065272C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func_04_PersonnelAccounting", "B4_Functions\Func_04_PersonnelAccounting\Func_04_PersonnelAccounting.csproj", "{8FF80829-4F62-49DA-9BFD-A1F065272C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func_05_BraveNewWorld", "B4_Functions\Func_05_BraveNewWorld\Func_05_BraveNewWorld.csproj", "{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +199,10 @@ Global
 		{8FF80829-4F62-49DA-9BFD-A1F065272C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF80829-4F62-49DA-9BFD-A1F065272C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF80829-4F62-49DA-9BFD-A1F065272C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -232,6 +238,7 @@ Global
 		{90F3FF65-3364-4A57-9ACF-194B8664B725} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
 		{0705602E-75A0-4417-BACB-FA5B2FB10754} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
 		{8FF80829-4F62-49DA-9BFD-A1F065272C72} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
+		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
