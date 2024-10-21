@@ -1,4 +1,4 @@
-﻿namespace Collections_01_Dyctionary
+﻿namespace Collections_01_Dictionary
 {
     public class Program
     {

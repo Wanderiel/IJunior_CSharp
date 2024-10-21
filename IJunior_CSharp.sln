@@ -75,7 +75,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func_05_BraveNewWorld", "B4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B5_Collections", "B5_Collections", "{2E969510-0DD4-4492-A21C-2A9BBAB960BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_01_Dyctionary", "B5_Collections\Collections_01_Dyctionary\Collections_01_Dyctionary.csproj", "{BF941FBF-2F5E-42A3-BFF8-8EE68EA325E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_01_Dictionary", "B5_Collections\Collections_01_Dictionary\Collections_01_Dictionary.csproj", "{BF941FBF-2F5E-42A3-BFF8-8EE68EA325E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
