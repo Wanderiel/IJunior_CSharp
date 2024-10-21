@@ -12,12 +12,12 @@
             char shadow = ' ';
 
             char[,] map = FillMap(path);
-            int trueScore = DrawMap(map, treasure);
+            int maxScore = DrawMap(map, treasure);
 
             if (SetPosition(map, shadow, out int playerPositionX, out int playerPositionY) == false)
                 return;
 
-            string result = Play(map, wall, treasure, shadow, player, playerPositionX, playerPositionY, trueScore);
+            string result = Play(map, wall, treasure, shadow, player, playerPositionX, playerPositionY, maxScore);
 
             Console.Clear();
             Console.WriteLine(result);
@@ -40,7 +40,7 @@
 
         private static int DrawMap(char[,] map, char treasure)
         {
-            int trueScore = 0;
+            int maxScore = 0;
 
             for (int i = 0; i < map.GetLength(0); i++)
             {
@@ -53,13 +53,13 @@
                     Console.ResetColor();
 
                     if (map[i, j] == treasure)
-                        trueScore++;
+                        maxScore++;
                 }
 
                 Console.WriteLine();
             }
 
-            return trueScore;
+            return maxScore;
         }
 
         private static bool SetPosition(char[,] map, char shadow, out int playerPositionX, out int playerPositionY)
@@ -78,7 +78,7 @@
         }
 
         private static string Play(char[,] map, char wall, char treasure, char shadow, char player,
-            int playerPositionX, int playerPositionY, int trueScore)
+            int playerPositionX, int playerPositionY, int maxScore)
         {
             bool isWorking = true;
 
@@ -116,7 +116,7 @@
                     PrintScore(score, padding + map.GetLength(1));
                 }
 
-                if (score == trueScore)
+                if (score == maxScore)
                 {
                     result = $"Победа! Собраны все сокровища! Ваши очки: {score}";
                     isWorking = false;
