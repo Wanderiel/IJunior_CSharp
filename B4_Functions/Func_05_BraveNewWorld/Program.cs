@@ -1,4 +1,7 @@
-﻿namespace Func_05_BraveNewWorld
+﻿using System.Numerics;
+using static System.Formats.Asn1.AsnWriter;
+
+namespace Func_05_BraveNewWorld
 {
     public class Program
     {
@@ -6,11 +9,18 @@
         {
             string path = "level01.txt";
 
+            char wall = '#';
+            char player = '@';
+            char treasure = '$';
+            char shadow = ' ';
+
             char[,] map = FillMap(path);
+            int trueScore = DrawMap(map, treasure);
 
-            int trueScore = DrawMap(map);
+            if (SetPosition(map, shadow, out int playerPositionX, out int playerPositionY) == false)
+                return;
 
-            string result = Play(map, trueScore);
+            string result = Play(map, wall, treasure, shadow, player, playerPositionX, playerPositionY, trueScore);
 
             Console.Clear();
             Console.WriteLine(result);
@@ -31,10 +41,9 @@
             return map;
         }
 
-        private static int DrawMap(char[,] map)
+        private static int DrawMap(char[,] map, char treasure)
         {
-            char treasure = '$';
-            int score = 0;
+            int trueScore = 0;
 
             for (int i = 0; i < map.GetLength(0); i++)
             {
@@ -47,116 +56,150 @@
                     Console.ResetColor();
 
                     if (map[i, j] == treasure)
-                        score++;
+                        trueScore++;
                 }
 
                 Console.WriteLine();
             }
 
-            return score;
+            return trueScore;
         }
 
-        private static string Play(char[,] map, int trueScore)
+        private static bool SetPosition(char[,] map, char shadow, out int playerPositionX, out int playerPositionY)
         {
             Random random = new Random();
+            int minRandomPosition = 2;
 
-            const ConsoleKey CommandUp = ConsoleKey.UpArrow;
-            const ConsoleKey CommandDown = ConsoleKey.DownArrow;
-            const ConsoleKey CommandLeft = ConsoleKey.LeftArrow;
-            const ConsoleKey CommandRight = ConsoleKey.RightArrow;
-            const ConsoleKey CommandQuit = ConsoleKey.Q;
+            while (true)
+            {
+                playerPositionX = random.Next(minRandomPosition, map.GetLength(1));
+                playerPositionY = random.Next(minRandomPosition, map.GetLength(0));
 
+                if (map[playerPositionY, playerPositionX] == shadow)
+                    return true;
+            }
+        }
+
+        private static string Play(char[,] map, char wall, char treasure, char shadow, char player,
+            int playerPositionX, int playerPositionY, int trueScore)
+        {
             bool isWorking = true;
-
-            char wall = '#';
-            char player = '@';
-            char treasure = '$';
-            char shadow = ' ';
 
             string result = "Благодарим за игру";
 
+            int padding = 3;
             int score = 0;
-            int minRandom = 2;
-            int positionX = 0;
-            int positionY = random.Next(minRandom, map.GetLength(0));
 
-            while (isWorking)
-            {
-                positionX = random.Next(minRandom, map.GetLength(1));
-
-                if (map[positionY, positionX] == shadow)
-                    isWorking = false;
-            }
-
-            PrintScore(score, minRandom + map.GetLength(1));
+            PrintScore(score, padding + map.GetLength(1));
 
             Console.CursorVisible = false;
-            Console.SetCursorPosition(positionX, positionY);
+            Console.SetCursorPosition(playerPositionX, playerPositionY);
             Console.Write(player);
-
-            isWorking = true;
 
             while (isWorking)
             {
                 int shiftY = 0;
                 int shiftX = 0;
 
-                ConsoleKeyInfo consoleKey = Console.ReadKey();
-
-                switch (consoleKey.Key)
+                if (ReadInput(out shiftX, out shiftY) == false)
                 {
-                    case CommandUp:
-                        shiftY--;
-                        break;
+                    isWorking = false;
 
-                    case CommandDown:
-                        shiftY++;
-                        break;
-
-                    case CommandLeft:
-                        shiftX--;
-                        break;
-
-                    case CommandRight:
-                        shiftX++;
-                        break;
-
-                    case CommandQuit:
-                        isWorking = false;
-                        break;
-                }
-
-                if (positionY + shiftY < 0 || positionX + shiftX < 0)
                     continue;
-
-                if (map[positionY + shiftY, positionX + shiftX] != wall)
-                {
-                    Console.SetCursorPosition(positionX, positionY);
-                    Console.Write(shadow);
-
-                    positionY += shiftY;
-                    positionX += shiftX;
-
-                    Console.SetCursorPosition(positionX, positionY);
-                    Console.Write(player);
                 }
 
-                if (map[positionY, positionX] == treasure)
-                {
-                    PrintScore(++score, minRandom + map.GetLength(1));
+                if (TryStep(map, wall, playerPositionX, playerPositionY, shiftX, shiftY) == false)
+                    continue;
+                else
+                    Move(ref playerPositionX, ref playerPositionY, shiftX, shiftY, player, shadow);
 
-                    map[positionY, positionX] = shadow;
+                if (TryCollectTreasures(map, playerPositionX, playerPositionY, treasure, shadow))
+                {
+                    score++;
+                    PrintScore(score, padding + map.GetLength(1));
                 }
 
                 if (score == trueScore)
                 {
-                    Console.SetCursorPosition(0, minRandom + map.GetLength(0));
                     result = $"Победа! Собраны все сокровища! Ваши очки: {score}";
                     isWorking = false;
                 }
             }
 
             return result;
+        }
+
+        private static bool ReadInput(out int shiftX, out int shiftY)
+        {
+            const ConsoleKey CommandUp = ConsoleKey.UpArrow;
+            const ConsoleKey CommandDown = ConsoleKey.DownArrow;
+            const ConsoleKey CommandLeft = ConsoleKey.LeftArrow;
+            const ConsoleKey CommandRight = ConsoleKey.RightArrow;
+            const ConsoleKey CommandQuit = ConsoleKey.Q;
+
+            shiftX = 0;
+            shiftY = 0;
+
+            ConsoleKeyInfo consoleKey = Console.ReadKey();
+
+            switch (consoleKey.Key)
+            {
+                case CommandUp:
+                    shiftY--;
+                    break;
+
+                case CommandDown:
+                    shiftY++;
+                    break;
+
+                case CommandLeft:
+                    shiftX--;
+                    break;
+
+                case CommandRight:
+                    shiftX++;
+                    break;
+
+                case CommandQuit:
+                    return false;
+            }
+
+            return true;
+        }
+
+        private static bool TryStep(char[,] map, char wall, int playerPositionX, int playerPositionY, int shiftX, int shiftY)
+        {
+            if (playerPositionY + shiftY < 0 || playerPositionX + shiftX < 0)
+                return false;
+
+            if (map[playerPositionY + shiftY, playerPositionX + shiftX] == wall)
+                return false;
+
+            return true;
+        }
+
+        private static void Move(ref int playerPositionX, ref int playerPositionY, int shiftX, int shiftY, char player, char shadow)
+        {
+            Console.SetCursorPosition(playerPositionX, playerPositionY);
+            Console.Write(shadow);
+
+            playerPositionY += shiftY;
+            playerPositionX += shiftX;
+
+            Console.SetCursorPosition(playerPositionX, playerPositionY);
+            Console.Write(player);
+        }
+
+        private static bool TryCollectTreasures(char[,] map, int playerPositionX, int playerPositionY, char treasure, char shadow)
+        {
+            if (map[playerPositionY, playerPositionX] == treasure)
+            {
+                map[playerPositionY, playerPositionX] = shadow;
+
+                return true;
+            }
+
+            return false;
         }
 
         private static void PrintScore(int score, int positionLeft)
