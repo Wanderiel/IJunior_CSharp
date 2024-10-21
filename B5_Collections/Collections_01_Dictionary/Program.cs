@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        private void Main(string[] args)
+        private static void Main(string[] args)
         {
             Dictionary<string, string> meaninglessCollection = new()
             {
