@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using static System.Formats.Asn1.AsnWriter;
-
-namespace Func_05_BraveNewWorld
+﻿namespace Func_05_BraveNewWorld
 {
     public class Program
     {
