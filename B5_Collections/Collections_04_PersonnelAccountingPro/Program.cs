@@ -1,4 +1,5 @@
-﻿namespace Collections_04_PersonnelAccountingPro
+﻿
+namespace Collections_04_PersonnelAccountingPro
 {
     public class Program
     {
@@ -78,19 +79,8 @@
 
         private static void AddRecord(Dictionary<string, List<string>> posts, string post, string fullName)
         {
-            if (string.IsNullOrWhiteSpace(post))
-            {
-                Console.WriteLine($"Поле \"Должность\" не может быть пустым или содержать только пробел.");
-
+            if (ValidatePost(post) == false || ValidateFullName(fullName) == false)
                 return;
-            }
-
-            if (string.IsNullOrWhiteSpace(fullName))
-            {
-                Console.WriteLine($"Поле \"ФИО\" не может быть пустым или содержать только пробел.");
-
-                return;
-            }
 
             Console.WriteLine("\nПодождите, записываю...");
 
@@ -101,6 +91,30 @@
             Thread.Sleep(1000);
 
             Console.WriteLine($"\nДобавлена новая запись: {fullName} - {post}");
+        }
+
+        private static bool ValidatePost(string post)
+        {
+            if (string.IsNullOrWhiteSpace(post))
+            {
+                Console.WriteLine($"Поле \"Должность\" не может быть пустым или содержать только пробел.");
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private static bool ValidateFullName(string fullName)
+        {
+            if (string.IsNullOrWhiteSpace(fullName))
+            {
+                Console.WriteLine($"Поле \"ФИО\" не может быть пустым или содержать только пробел.");
+
+                return false;
+            }
+
+            return true;
         }
 
         private static void RemoveDossier(Dictionary<string, List<string>> posts)
@@ -115,66 +129,95 @@
             Console.WriteLine("Инициализация процедуры удаления записи...");
             Thread.Sleep(500);
 
-            Console.Write("Введите ФИО: ");
-            string fullName = Console.ReadLine();
+            Console.Write("Введите должность сотрудника: ");
+            string post = Console.ReadLine();
 
-            if (TryRemove(posts, fullName))
-                Console.WriteLine("Все найденные записи были удалены.");
-            else
+            List<string> employees = GetEmployees(posts, post);
+
+            if (employees == null)
+                return;
+
+            PrintEmployees(employees, post);
+
+            Console.Write("Введите Id сотрудника: ");
+            string userInput = Console.ReadLine();
+
+            if (TryRemove(employees, userInput) == false)
+            {
                 Console.WriteLine("Удаление не удалось.");
+
+                return;
+            }
+
+            Console.WriteLine("Запись была удалена.");
+
+            if (employees.Count == 0)
+                posts.Remove(post);
         }
 
-        private static bool TryRemove(Dictionary<string, List<string>> posts, string fullName)
+        private static List<string> GetEmployees(Dictionary<string, List<string>> posts, string post)
         {
-            bool isRemove = false;
+            if (ValidatePost(post) == false)
+                return null;
 
-            if (string.IsNullOrWhiteSpace(fullName))
+            if (posts.ContainsKey(post) == false)
+                return null;
+
+            return posts[post];
+        }
+
+        private static bool TryRemove(List<string> employees, string userInput)
+        {
+            if (employees == null)
+                return false;
+
+            if (int.TryParse(userInput, out int id) == false)
             {
-                Console.WriteLine($"Поле \"ФИО\" не может быть пустым или содержать только пробел.");
+                Console.WriteLine($"Ожидалось число.");
 
-                return isRemove;
+                return false;
             }
 
-            foreach (string post in posts.Keys)
-            {
-                for (int i = posts[post].Count - 1; i >= 0; i--)
-                {
-                    string name = posts[post][i];
+            if (id < 1 || id > employees.Count)
+                return false;
 
-                    if (name == fullName)
-                    {
-                        posts[post].Remove(name);
-                        isRemove = true;
-                    }
-                }
+            employees.RemoveAt(id - 1);
 
-                if (posts[post].Count == 0)
-                    posts.Remove(post);
-            }
-
-            return isRemove;
+            return true;
         }
 
         private static void PrintDossiers(Dictionary<string, List<string>> posts)
         {
-            const int RecordLength = 80;
-            const int FullNameLength = 36;
-            const int PostLength = 37;
-
-            char symbol = '=';
-
-            Console.WriteLine(new string(symbol, RecordLength));
-
             if (posts.Count == 0)
             {
-                Console.WriteLine($"{"Записей не найдено",RecordLength}");
+                Console.WriteLine("Записей не найдено");
 
                 return;
             }
 
             foreach (string post in posts.Keys)
-                foreach (string fullName in posts[post])
-                    Console.WriteLine($"| {fullName,FullNameLength} | {post,PostLength} |");
+                PrintEmployees(posts[post], post);
+        }
+
+        private static void PrintEmployees(List<string> employees, string post)
+        {
+            const int RecordLength = 80;
+            const int IdLength = 6;
+            const int FullNameLength = 32;
+            const int PostLength = 32;
+
+            char symbol = '=';
+
+            if (employees is null)
+                throw new ArgumentNullException(nameof(employees));
+
+            Console.WriteLine(new string(symbol, RecordLength));
+
+            for (int i = 0; i < employees.Count; i++)
+            {
+                int id = i + 1;
+                Console.WriteLine($"| {id,IdLength} | {employees[i],FullNameLength} | {post,PostLength} |");
+            }
 
             Console.WriteLine(new string(symbol, RecordLength));
         }
