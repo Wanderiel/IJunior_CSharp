@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_02_Queue", "B5_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_03_DynamicArrayPro", "B5_Collections\Collections_03_DynamicArrayPro\Collections_03_DynamicArrayPro.csproj", "{0129A029-F605-4BFA-94D4-DFE3893C0F88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_04_PersonnelAccountingPro", "B5_Collections\Collections_04_PersonnelAccountingPro\Collections_04_PersonnelAccountingPro.csproj", "{AD1235D9-5430-44A7-8048-827DC26EF284}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,10 @@ Global
 		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1235D9-5430-44A7-8048-827DC26EF284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1235D9-5430-44A7-8048-827DC26EF284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1235D9-5430-44A7-8048-827DC26EF284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1235D9-5430-44A7-8048-827DC26EF284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -262,6 +268,7 @@ Global
 		{BF941FBF-2F5E-42A3-BFF8-8EE68EA325E6} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{0129A029-F605-4BFA-94D4-DFE3893C0F88} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
+		{AD1235D9-5430-44A7-8048-827DC26EF284} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
