@@ -79,6 +79,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_01_Dictionary",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_02_Queue", "B5_Collections\Collections_02_Queue\Collections_02_Queue.csproj", "{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_03_DynamicArrayPro", "B5_Collections\Collections_03_DynamicArrayPro\Collections_03_DynamicArrayPro.csproj", "{0129A029-F605-4BFA-94D4-DFE3893C0F88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -217,6 +219,10 @@ Global
 		{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0129A029-F605-4BFA-94D4-DFE3893C0F88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -255,6 +261,7 @@ Global
 		{D72DF6D1-5C01-4EBD-9177-F3ABD20B844F} = {4F6ACA31-4E0E-490E-AF5A-ACD02D2F2AFF}
 		{BF941FBF-2F5E-42A3-BFF8-8EE68EA325E6} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
+		{0129A029-F605-4BFA-94D4-DFE3893C0F88} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
