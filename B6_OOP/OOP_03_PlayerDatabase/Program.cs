@@ -95,7 +95,7 @@ namespace OOP_03_PlayerDatabase
                     break;
 
                 case CommandSaveDatabase:
-                    _controller.SaveDatabase(_database.GetPlayers());
+                    _controller.SaveDatabase(_database.Players);
                     break;
 
                 case CommandQuit:
@@ -216,9 +216,11 @@ namespace OOP_03_PlayerDatabase
         public int Level { get; private set; }
         public bool IsBanned { get; private set; }
 
-        public void Ban() => IsBanned = true;
+        public void Ban() =>
+            IsBanned = true;
 
-        public void Unban() => IsBanned = false;
+        public void Unban() =>
+            IsBanned = false;
     }
 
     public class Printer
@@ -241,6 +243,8 @@ namespace OOP_03_PlayerDatabase
     {
         private readonly Printer _printer = new Printer();
         private List<Player> _players = new List<Player>();
+
+        public List<Player> Players => new List<Player>(_players);
 
         public void CreatePlayer()
         {
@@ -321,18 +325,11 @@ namespace OOP_03_PlayerDatabase
             Console.ReadKey();
         }
 
-        public List<Player> GetPlayers()
-        {
-            List<Player> listPlayers = new List<Player>();
-
-            foreach (Player player in _players)
-                listPlayers.Add(player);
-
-            return listPlayers;
-        }
-
         public void Attach(List<Player> players)
         {
+            if (players == null)
+                return;
+
             _players = players;
         }
 
