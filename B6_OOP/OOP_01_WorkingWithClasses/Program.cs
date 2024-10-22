@@ -1,8 +1,8 @@
 ﻿namespace OOP_01_WorkingWithClasses
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Player player = new Player(
                 "Вандериэл", "Следопыт", 30,
