@@ -18,24 +18,17 @@
         private int _maxX = 100;
         private int _maxY = 25;
 
-        public void Draw(IUnit unit)
+        public void Draw(Player player)
         {
-            if (unit.PositionX < 0 && unit.PositionX > _maxX || unit.PositionY < 0 && unit.PositionY > _maxY)
+            if (player.PositionX < 0 && player.PositionX > _maxX || player.PositionY < 0 && player.PositionY > _maxY)
                 return;
 
-            Console.SetCursorPosition(unit.PositionX, unit.PositionY);
-            Console.Write(unit.Symbol);
+            Console.SetCursorPosition(player.PositionX, player.PositionY);
+            Console.Write(player.Symbol);
         }
     }
 
-    public interface IUnit
-    {
-        int PositionX { get; }
-        int PositionY { get; }
-        char Symbol { get; }
-    }
-
-    public class Player : IUnit
+    public class Player
     {
         public Player(int positionX, int positionY, char symbol = '@')
         {
