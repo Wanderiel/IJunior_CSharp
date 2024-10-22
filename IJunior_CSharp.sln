@@ -77,13 +77,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B5_Collections", "B5_Collec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_01_Dictionary", "B5_Collections\Collections_01_Dictionary\Collections_01_Dictionary.csproj", "{BF941FBF-2F5E-42A3-BFF8-8EE68EA325E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_02_Queue", "B5_Collections\Collections_02_Queue\Collections_02_Queue.csproj", "{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_02_Queue", "B5_Collections\Collections_02_Queue\Collections_02_Queue.csproj", "{55E6A4EE-C30F-4A2A-A4EB-3F118566AFD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_03_DynamicArrayPro", "B5_Collections\Collections_03_DynamicArrayPro\Collections_03_DynamicArrayPro.csproj", "{0129A029-F605-4BFA-94D4-DFE3893C0F88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_03_DynamicArrayPro", "B5_Collections\Collections_03_DynamicArrayPro\Collections_03_DynamicArrayPro.csproj", "{0129A029-F605-4BFA-94D4-DFE3893C0F88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_04_PersonnelAccountingPro", "B5_Collections\Collections_04_PersonnelAccountingPro\Collections_04_PersonnelAccountingPro.csproj", "{AD1235D9-5430-44A7-8048-827DC26EF284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_04_PersonnelAccountingPro", "B5_Collections\Collections_04_PersonnelAccountingPro\Collections_04_PersonnelAccountingPro.csproj", "{AD1235D9-5430-44A7-8048-827DC26EF284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections_05_Merging", "B5_Collections\Collections_05_Merging\Collections_05_Merging.csproj", "{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections_05_Merging", "B5_Collections\Collections_05_Merging\Collections_05_Merging.csproj", "{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B6_OOP", "B6_OOP", "{D1E3AF38-CB6B-47A5-A7EC-470B0FBC4002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_01_WorkingWithClasses", "B6_OOP\OOP_01_WorkingWithClasses\OOP_01_WorkingWithClasses.csproj", "{B15FC522-734C-42A3-B446-AE30CF766DCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -235,6 +239,10 @@ Global
 		{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,6 +284,7 @@ Global
 		{0129A029-F605-4BFA-94D4-DFE3893C0F88} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{AD1235D9-5430-44A7-8048-827DC26EF284} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
+		{B15FC522-734C-42A3-B446-AE30CF766DCD} = {D1E3AF38-CB6B-47A5-A7EC-470B0FBC4002}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
