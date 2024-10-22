@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 0,
+    "Name": "Rojer",
+    "Rank": "Joker",
+    "Level": 80,
+    "IsBanned": true
+  },
+  {
+    "Id": 3,
+    "Name": "Thor",
+    "Rank": "God",
+    "Level": 109,
+    "IsBanned": false
+  },
+  {
+    "Id": 9,
+    "Name": "Groot",
+    "Rank": "Groot",
+    "Level": 30,
+    "IsBanned": false
+  }
+]
