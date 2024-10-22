@@ -19,6 +19,12 @@
     {
         public Card(string name, string suit)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException($"\"{nameof(name)}\" не может быть пустым или содержать только пробел.", nameof(name));
+
+            if (string.IsNullOrWhiteSpace(suit))
+                throw new ArgumentException($"\"{nameof(suit)}\" не может быть пустым или содержать только пробел.", nameof(suit));
+
             Suit = suit;
             Name = name;
         }
@@ -117,9 +123,6 @@
 
             return cards;
         }
-
-        public Card GiveNextCard() =>
-            _deck.GiveCard();
     }
 
     public class Player
@@ -157,14 +160,10 @@
 
         public PlayingTable(Croupier croupier, Player player)
         {
-            if (croupier == null)
-                return;
-
-            if (player == null)
-                return;
-
-            _croupier = croupier;
-            _player = player;
+            _croupier = croupier ??
+                throw new ArgumentNullException(nameof(croupier));
+            _player = player ??
+                throw new ArgumentNullException(nameof(player));
         }
 
         public void Play()
