@@ -89,6 +89,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B6_OOP", "B6_OOP", "{D1E3AF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_01_WorkingWithClasses", "B6_OOP\OOP_01_WorkingWithClasses\OOP_01_WorkingWithClasses.csproj", "{B15FC522-734C-42A3-B446-AE30CF766DCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_02_WorkingWithProperties", "B6_OOP\OOP_02_WorkingWithProperties\OOP_02_WorkingWithProperties.csproj", "{40397A72-CBFE-4F0B-BC51-D91C3AC34A70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B15FC522-734C-42A3-B446-AE30CF766DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40397A72-CBFE-4F0B-BC51-D91C3AC34A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40397A72-CBFE-4F0B-BC51-D91C3AC34A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40397A72-CBFE-4F0B-BC51-D91C3AC34A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40397A72-CBFE-4F0B-BC51-D91C3AC34A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -285,6 +291,7 @@ Global
 		{AD1235D9-5430-44A7-8048-827DC26EF284} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{8BB8FCC2-EE8E-406C-B6C1-E31A37C5FDF9} = {2E969510-0DD4-4492-A21C-2A9BBAB960BF}
 		{B15FC522-734C-42A3-B446-AE30CF766DCD} = {D1E3AF38-CB6B-47A5-A7EC-470B0FBC4002}
+		{40397A72-CBFE-4F0B-BC51-D91C3AC34A70} = {D1E3AF38-CB6B-47A5-A7EC-470B0FBC4002}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {033C9FB5-17CE-453B-8B20-2962315533C0}
