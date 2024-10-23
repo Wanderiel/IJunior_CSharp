@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 
 namespace OOP_06_Shop
 {
@@ -6,9 +7,10 @@ namespace OOP_06_Shop
     {
         private static void Main(string[] args)
         {
-            PersonFactory personFactory = new PersonFactory();
-            Player player = personFactory.CreatePlayer("Дровакин");
-            Trader trader = personFactory.CreateTrader("Эль'Ри'сад");
+            TraderFactory traderFactory = new TraderFactory();
+            PlayerFactory playerFactory = new PlayerFactory();
+            Trader trader = traderFactory.CreateTrader("Эль'Ри'сад");
+            Player player = playerFactory.CreatePlayer("Дровакин");
             Shop shop = new Shop(trader, player);
 
             shop.Work();
@@ -19,12 +21,12 @@ namespace OOP_06_Shop
         }
     }
 
-    public class PersonFactory
+    public class TraderFactory
     {
         private readonly Random _random = new Random();
         private List<Item> _items = new List<Item>();
 
-        public PersonFactory()
+        public TraderFactory()
         {
             LoadItems();
         }
@@ -43,16 +45,6 @@ namespace OOP_06_Shop
             return trader;
         }
 
-        public Player CreatePlayer(string name)
-        {
-            int minMoney = 301;
-            int maxMoney = 1001;
-            int minWeight = 120;
-            int maxWeight = 200;
-
-            return new Player(name, _random.Next(minWeight, maxWeight), _random.Next(minMoney, maxMoney));
-        }
-
         private void LoadItems()
         {
             string path = "items.json";
@@ -63,6 +55,20 @@ namespace OOP_06_Shop
 
         private Item GetRandomItem() =>
             _items[_random.Next(_items.Count)];
+    }
+
+    public class PlayerFactory
+    {
+        private readonly Random _random = new Random();
+
+        public Player CreatePlayer(string name)
+        {
+            int minMoney = 301;
+            int maxMoney = 1001;
+            int minWeight = 120;
+            int maxWeight = 200;
+            return new Player(name, _random.Next(minWeight, maxWeight), _random.Next(minMoney, maxMoney));
+        }
     }
 
     public class Shop
