@@ -6,7 +6,10 @@ namespace OOP_06_Shop
     {
         private static void Main(string[] args)
         {
-            Shop shop = new Shop();
+            PersonFactory personFactory = new PersonFactory();
+            Player player = personFactory.CreatePlayer("Дровакин");
+            Trader trader = personFactory.CreateTrader("Эль'Ри'сад");
+            Shop shop = new Shop(trader, player);
 
             shop.Work();
 
@@ -16,17 +19,64 @@ namespace OOP_06_Shop
         }
     }
 
-    public class Shop
+    public class PersonFactory
     {
         private readonly Random _random = new Random();
-        private List<Item> _items = new List<Item>();
-        private Player _player;
-        private Trader _trader;
+        private List<Item> _items;
 
-        public Shop()
+        public PersonFactory()
         {
+            _items = new List<Item>();
             LoadItems();
-            CreatePersons();
+        }
+
+        public Trader CreateTrader(string name)
+        {
+            int countItem = 20;
+            Trader trader = new Trader(name);
+
+            for (int i = 0; i < countItem; i++)
+            {
+                Item item = GetRandomItem();
+                trader.AddToInventory(item);
+            }
+
+            return trader;
+        }
+
+        public Player CreatePlayer(string name)
+        {
+            int minMoney = 301;
+            int maxMoney = 1001;
+            int minWeight = 120;
+            int maxWeight = 200;
+
+            return new Player(name, _random.Next(minWeight, maxWeight), _random.Next(minMoney, maxMoney));
+        }
+
+        private void LoadItems()
+        {
+            string path = "items.json";
+
+            using Stream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            _items = JsonSerializer.Deserialize<List<Item>>(fileStream);
+        }
+
+        private Item GetRandomItem() =>
+            _items[_random.Next(_items.Count)];
+    }
+
+    public class Shop
+    {
+        private readonly Player _player;
+        private readonly Trader _trader;
+
+        public Shop(Trader trader, Player player)
+        {
+            _trader = trader ??
+                throw new ArgumentNullException(nameof(trader));
+            _player = player ??
+                throw new ArgumentNullException(nameof(player));
         }
 
         public void Work()
@@ -58,7 +108,7 @@ namespace OOP_06_Shop
                         break;
 
                     case CommandBuyProduct:
-                        BuyProduct();
+                        SellProduct();
                         break;
 
                     case CommandShowInventory:
@@ -74,39 +124,6 @@ namespace OOP_06_Shop
             }
         }
 
-        private void LoadItems()
-        {
-            string path = "items.json";
-
-            using Stream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
-            _items = JsonSerializer.Deserialize<List<Item>>(fileStream);
-        }
-
-        private void CreatePersons()
-        {
-            int minMoney = 301;
-            int maxMoney = 1001;
-
-            _player = new Player("Дровакин", 160, _random.Next(minMoney, maxMoney));
-            _trader = new Trader("Эль'Ри'сад");
-
-            FillInventory();
-        }
-
-        private void FillInventory()
-        {
-            int countItem = 20;
-
-            for (int i = 0; i < countItem; i++)
-            {
-                Item item = GetRandomItem();
-                _trader.AddToInventory(item);
-            }
-        }
-
-        private Item GetRandomItem() =>
-            _items[_random.Next(_items.Count)];
-
         private void ShowProducts()
         {
             Console.Clear();
@@ -114,7 +131,7 @@ namespace OOP_06_Shop
             _trader.ShowInventory();
         }
 
-        private void BuyProduct()
+        private void SellProduct()
         {
             ShowProducts();
             Console.WriteLine($"Какой товар хотите приобрести?");
@@ -142,12 +159,17 @@ namespace OOP_06_Shop
                 return;
             }
 
-            if (_player.TryBuy(item))
+            if (_player.TryBuy(item) == false)
             {
-                _trader.Sell(item);
-                Console.WriteLine($"Вы приобрели: {item.Name} за {item.Price}");
+                Console.WriteLine("Вы не можете это купить");
+
+                return;
             }
-        }
+
+                _trader.Sell(item);
+                _player.Buy(item);
+                Console.WriteLine($"Вы приобрели: {item.Name} за {item.Price}");
+          }
 
         private void ShowInventory()
         {
@@ -195,17 +217,20 @@ namespace OOP_06_Shop
 
         public bool TryBuy(Item item)
         {
-            if (CanAdd(item) == false || CanPay(item) == false)
+            if (CanAdd(item) == false || CanPay(item.Price) == false)
             {
-                Console.WriteLine("Вы не можете это купить");
+                Console.WriteLine("Я не могу это купить");
 
                 return false;
             }
 
+            return true;
+        }
+
+        public void Buy(Item item)
+        {
             TakeAwayMoney(item.Price);
             Inventory.Add(item);
-
-            return true;
         }
 
         public override void ShowInventory()
@@ -217,15 +242,11 @@ namespace OOP_06_Shop
         private void TakeAwayMoney(int money) =>
             Money -= money;
 
-        private bool CanAdd(Item item)
-        {
-            double totalWeight = Inventory.TotalWeight + item.Weight;
+        private bool CanAdd(Item item) =>
+            Inventory.TotalWeight + item.Weight <= CarryWeight;
 
-            return totalWeight <= CarryWeight;
-        }
-
-        private bool CanPay(Item item) =>
-            Money >= item.Price;
+        private bool CanPay(int price) =>
+            Money >= price;
     }
 
     public class Trader : Person
@@ -241,9 +262,8 @@ namespace OOP_06_Shop
         public bool TryGetItem(int index, out Item item)
         {
             int id = index - 1;
-            item = Inventory.GetItem(id);
 
-            if (item == null)
+            if (Inventory.TryGetItem(id, out item) == false)
                 return false;
 
             return true;
@@ -259,18 +279,7 @@ namespace OOP_06_Shop
 
         public int Count => _items.Count;
 
-        public double TotalWeight
-        {
-            get
-            {
-                double weight = 0;
-
-                foreach (Item item in _items)
-                    weight += item.Weight;
-
-                return weight;
-            }
-        }
+        public double TotalWeight => GetTotalWeight();
 
         public void Add(Item item) =>
             _items.Add(item);
@@ -297,15 +306,28 @@ namespace OOP_06_Shop
             Console.WriteLine();
         }
 
-        public Item GetItem(int id)
+        public bool TryGetItem(int id, out Item item)
         {
-            if (id < 0)
-                return null;
+            if (id < 0 || id >= Count)
+            {
+                item = null;
 
-            if (id >= Count)
-                return null;
+                return false;
+            }
 
-            return _items[id];
+            item = _items[id];
+
+            return true;
+        }
+
+        private double GetTotalWeight()
+        {
+            double weight = 0;
+
+            foreach (Item item in _items)
+                weight += item.Weight;
+
+            return weight;
         }
     }
 
