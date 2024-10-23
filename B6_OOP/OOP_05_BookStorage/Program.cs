@@ -86,22 +86,13 @@
         private void AddBook()
         {
             Console.Clear();
-            Console.Write("Введите название книги: ");
-            string name = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(name))
+            if (TryDescribe("Введите название книги: ", out string name) == false)
                 return;
 
-            Console.Write("Введите ФИО/псевдоним автора: ");
-            string author = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(author))
+            if (TryDescribe("Введите ФИО/псевдоним автора: ", out string author) == false)
                 return;
 
-            Console.Write("Укажите жанр книги: ");
-            string genre = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(genre))
+            if (TryDescribe("Укажите жанр книги: ",out string genre )==false)
                 return;
 
             Console.Write("Укажите год публикации: ");
@@ -114,6 +105,17 @@
 
             Console.WriteLine("Книга успешно добавлена");
             Console.ReadKey();
+        }
+
+        private bool TryDescribe(string message, out string description)
+        {
+            Console.Write(message);
+            description = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(description))
+                return false;
+
+            return true;
         }
 
         private void RemoveBook()
@@ -146,7 +148,7 @@
             Console.Clear();
             Console.WriteLine("Список всех книг:");
 
-            List<Book> books = _storage.GetAllBooks();
+            List<Book> books = _storage.Books;
 
             PrintBooksInfo(books);
         }
@@ -196,6 +198,8 @@
     {
         private readonly List<Book> _books = new List<Book>();
 
+        public List<Book> Books => new List<Book>(_books);
+
         public void AddBook(Book book) =>
             _books.Add(book);
 
@@ -208,8 +212,6 @@
                 Console.ReadKey();
             }
         }
-
-        public List<Book> GetAllBooks() => new List<Book>(_books);
 
         public List<Book> GetBooksByTitle(string title)
         {
