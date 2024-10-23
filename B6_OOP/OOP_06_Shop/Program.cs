@@ -67,6 +67,7 @@ namespace OOP_06_Shop
             int maxMoney = 1001;
             int minWeight = 120;
             int maxWeight = 200;
+
             return new Player(name, _random.Next(minWeight, maxWeight), _random.Next(minMoney, maxMoney));
         }
     }
