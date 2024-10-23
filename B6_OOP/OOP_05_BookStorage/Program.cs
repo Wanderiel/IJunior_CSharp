@@ -1,8 +1,8 @@
 ﻿namespace OOP_05_BookStorage
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             StaffMember staffMember = new StaffMember();
 
