@@ -22,11 +22,10 @@ namespace OOP_06_Shop
     public class PersonFactory
     {
         private readonly Random _random = new Random();
-        private List<Item> _items;
+        private List<Item> _items = new List<Item>();
 
         public PersonFactory()
         {
-            _items = new List<Item>();
             LoadItems();
         }
 
@@ -166,10 +165,10 @@ namespace OOP_06_Shop
                 return;
             }
 
-                _trader.Sell(item);
-                _player.Buy(item);
-                Console.WriteLine($"Вы приобрели: {item.Name} за {item.Price}");
-          }
+            _trader.Sell(item);
+            _player.Buy(item);
+            Console.WriteLine($"Вы приобрели: {item.Name} за {item.Price}");
+        }
 
         private void ShowInventory()
         {
